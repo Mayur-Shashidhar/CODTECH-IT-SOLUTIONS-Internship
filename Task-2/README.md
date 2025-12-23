@@ -1,28 +1,7 @@
 # Library Management System - RESTful API
 
-[![Node.js](https://img.shields.io/badge/Node.js-v14+-green.svg)](https://nodejs.org/)
-[![Express](https://img.shields.io/badge/Express-v4.18+-blue.svg)](https://expressjs.com/)
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-
 A complete RESTful API for managing a library's book inventory with full CRUD operations.
 
----
-
-## 📋 Table of Contents
-- [Overview](#overview)
-- [Task Requirements & Completion](#task-requirements--completion)
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Installation](#installation)
-- [Usage](#usage)
-- [API Endpoints Quick Reference](#api-endpoints-quick-reference)
-- [Detailed API Documentation](#detailed-api-documentation)
-- [Testing Examples](#testing-examples)
-- [Error Handling](#error-handling)
-- [Data Model](#data-model)
-- [Project Structure](#project-structure)
-- [Learning Outcomes](#learning-outcomes)
-- [License](#license)
 
 ---
 
