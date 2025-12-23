@@ -1,0 +1,156 @@
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.app-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo {
+  font-size: 24px;
+}
+
+.document-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+.doc-label {
+  opacity: 0.9;
+}
+
+.doc-id {
+  font-weight: 600;
+  font-family: monospace;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+}
+
+.user-name-display {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.user-name-display:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.user-color-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.user-name {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.edit-icon {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.name-edit {
+  display: flex;
+  align-items: center;
+}
+
+.name-input {
+  padding: 6px 12px;
+  background-color: rgba(255, 255, 255, 0.25);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 6px;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  outline: none;
+}
+
+.name-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.connection-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.connection-status.connected {
+  background-color: rgba(76, 175, 80, 0.2);
+  color: #a6e22e;
+}
+
+.connection-status.disconnected {
+  background-color: rgba(244, 67, 54, 0.2);
+  color: #f92672;
+}
+
+.status-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+.status-indicator.connected {
+  background-color: #a6e22e;
+  box-shadow: 0 0 8px #a6e22e;
+}
+
+.status-indicator.disconnected {
+  background-color: #f92672;
+  box-shadow: 0 0 8px #f92672;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}

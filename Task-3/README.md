@@ -179,10 +179,24 @@ Integrate libraries like:
 - Verify WebSocket connection status (green indicator)
 - Refresh the page to reconnect
 
+## 🚀 Future Enhancements
+
+- [ ] Syntax highlighting for multiple languages
+- [ ] File/document browser
+- [ ] Chat functionality
+- [ ] Code execution capabilities
+- [ ] User authentication
+- [ ] Persistent storage (database)
+- [ ] Version history
+- [ ] Export documents
 
 ## 📝 License
 
 MIT License - Feel free to use this project for your internship or learning purposes!
+
+## 👨‍💻 Development
+
+Built as part of the CODTECH Internship Task-3.
 
 **Technologies Used:**
 - Node.js
@@ -192,3 +206,5 @@ MIT License - Feel free to use this project for your internship or learning purp
 - CSS3
 
 ---
+
+Made with ❤️ for real-time collaboration
