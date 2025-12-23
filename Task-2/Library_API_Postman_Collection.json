@@ -1,0 +1,221 @@
+{
+  "info": {
+    "name": "Library Management API",
+    "description": "CODTECH Internship Task 2 - RESTful API for Library System",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get API Info",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/",
+          "host": ["{{baseUrl}}"]
+        },
+        "description": "Get API information and available endpoints"
+      }
+    },
+    {
+      "name": "Get All Books",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/books",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "books"]
+        },
+        "description": "Retrieve all books from the library"
+      }
+    },
+    {
+      "name": "Get All Books - Filter by Genre",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/books?genre=Fiction",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "books"],
+          "query": [
+            {
+              "key": "genre",
+              "value": "Fiction"
+            }
+          ]
+        },
+        "description": "Get books filtered by genre"
+      }
+    },
+    {
+      "name": "Get All Books - Filter by Availability",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/books?available=true",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "books"],
+          "query": [
+            {
+              "key": "available",
+              "value": "true"
+            }
+          ]
+        },
+        "description": "Get only available books"
+      }
+    },
+    {
+      "name": "Get Book by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/books/{{bookId}}",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "books", "{{bookId}}"]
+        },
+        "description": "Get a specific book by ID"
+      }
+    },
+    {
+      "name": "Search Books",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/books/search/query?q=gatsby",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "books", "search", "query"],
+          "query": [
+            {
+              "key": "q",
+              "value": "gatsby"
+            }
+          ]
+        },
+        "description": "Search books by title, author, ISBN, or genre"
+      }
+    },
+    {
+      "name": "Create New Book",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"The Hobbit\",\n  \"author\": \"J.R.R. Tolkien\",\n  \"isbn\": \"978-0-547-92822-7\",\n  \"publishedYear\": 1937,\n  \"genre\": \"Fantasy\",\n  \"availableCopies\": 4,\n  \"totalCopies\": 4\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/books",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "books"]
+        },
+        "description": "Add a new book to the library"
+      }
+    },
+    {
+      "name": "Update Book (Full)",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"1984 (Updated Edition)\",\n  \"author\": \"George Orwell\",\n  \"isbn\": \"978-0-452-28423-4\",\n  \"publishedYear\": 1949,\n  \"genre\": \"Dystopian Fiction\",\n  \"availableCopies\": 5,\n  \"totalCopies\": 5\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/books/{{bookId}}",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "books", "{{bookId}}"]
+        },
+        "description": "Update all fields of a book"
+      }
+    },
+    {
+      "name": "Update Book (Partial)",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"availableCopies\": 7,\n  \"genre\": \"American Literature\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/books/{{bookId}}",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "books", "{{bookId}}"]
+        },
+        "description": "Update specific fields of a book"
+      }
+    },
+    {
+      "name": "Delete Book",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/books/{{bookId}}",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "books", "{{bookId}}"]
+        },
+        "description": "Delete a book from the library"
+      }
+    },
+    {
+      "name": "Borrow Book",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/books/{{bookId}}/borrow",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "books", "{{bookId}}", "borrow"]
+        },
+        "description": "Borrow a book (decrease available copies)"
+      }
+    },
+    {
+      "name": "Return Book",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/books/{{bookId}}/return",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "books", "{{bookId}}", "return"]
+        },
+        "description": "Return a borrowed book (increase available copies)"
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000",
+      "type": "string"
+    },
+    {
+      "key": "bookId",
+      "value": "",
+      "type": "string"
+    }
+  ]
+}
